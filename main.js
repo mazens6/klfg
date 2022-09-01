@@ -1,6 +1,6 @@
 let title = document.querySelector('.title');
 let ul = document.querySelector('ul');
-let roload = document.querySelector('.roload');
+let reload = document.querySelector('.reload');
 
 
 window.onload = function(){
@@ -11,24 +11,24 @@ window.onload = function(){
     }
 
 }
-window.addEventListener('online',function(){
+window.addEventListener("online",function(){
     online();
-})
-window.addEventListener('offline',function(){
+});
+window.addEventListener("offline",function(){
     offline();
-})
+});
 
 function online(){
      title.innerHTML = 'Online now';
      title.style.color = 'green';
      ul.classList.add('hide');
-     roload.classList.add('hide');
+     reload.classList.add('hide');
 }
 
 
 function offline(){
     title.innerHTML = 'offline now';
-     title.style.color = 'yellow';
+     title.style.color = 'blue';
      ul.classList.remove('hide');
-     roload.classList.remove('hide');
+     reload.classList.remove('hide');
 }
